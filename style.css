@@ -2,4 +2,684 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at 70% 30%, #0d3d34 0%, #051412 60%);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.main-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.logo {
+    width: 55px;
+}
+
+.drink-tabss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: #f0dddd;
+    padding: 15px;
+    border-radius: 50px;
+    width: fit-content;
+    color: #00704A;
+    margin-left: 200px;
+}
+
+.tab {
+    background: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.tab.active,
+.tab:hover {
+    background: white;
+    color: #014b32;
+}
+
+.nav-right {
+    display: flex;
+    gap: 25px;
+    font-size: 18px;
+}
+
+.cart-icon {
+    color: #00d084;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.content {
+    flex: 1;
+    z-index: 10;
+}
+
+.subtitle {
+    font-size: 12px;
+    letter-spacing: 4px;
+    opacity: 0.6;
+}
+
+.content h1 {
+    font-size: 90px;
+    font-weight: 900;
+    line-height: 0.95;
+    margin: 15px 0;
+}
+
+.highlight {
+    color: #00d084;
+}
+
+.description {
+    color: #889a97;
+    font-size: 14px;
+    max-width: 450px;
+    line-height: 1.6;
+}
+
+.action-bar {
+    margin: 35px 0;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.rating {
+    color: #00d084;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.rating strong {
+    color: white;
+    font-size: 30px;
+    margin-left: 10px;
+    font-style: normal;
+}
+
+.add-btn {
+    background: white;
+    color: black;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background: #00d084;
+    color: white;
+}
+
+.mini-previews {
+    width: 200px;
+    background-color: #014b32;
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+    border-radius: 50px;
+}
+
+.p-img {
+    border-radius: 50px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.p-img.active {
+    border-radius: 50px;
+}
+
+.p-img img {
+    width: 100%;
+}
+
+.image-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-cup {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    z-index: 5;
+    right: 50px;
+    border-radius: 50px;
+
+}
+
+.main-circle {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 200px;
+    background: #00704A;
+    border-radius: 50px;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.bg-text {
+    position: absolute;
+    right: -100px;
+    transform: rotate(90deg);
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+}
+
+nav {
+    width: 100%;
+    padding: 30px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    width: 55px;
+    z-index: 10;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+    opacity: 1;
+    color: #00d084;
+}
+
+.nav-right {
+    display: flex;
+    gap: 25px;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.cart-icon {
+    color: #00d084;
+}
+
+.menu a {
+    position: relative;
+    transition: 0.3s;
+}
+
+.menu a::after {
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #00d084;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.menu a:hover {
+    color: #00d084;
+    transform: translateY(-3px);
+}
+
+.nav-right i {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-right i:hover {
+    color: #00d084;
+    transform: scale(1.2);
+}
+
+.main-cup {
+    transition: 0.5s ease;
+}
+
+.p-img {
+    transition: 0.3s;
+}
+
+.p-img:hover {
+    background: #00d084;
+    transform: translateY(-5px);
+}
+
+.add-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.add-btn::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #00d084;
+    transition: 0.4s;
+    z-index: -1;
+}
+
+.add-btn:hover::before {
+    width: 100%;
+}
+
+.add-btn:hover {
+    color: white;
+}
+
+.drinks-section {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+
+.drink-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #014b32;
+    padding: 15px;
+    border-radius: 50px;
+    width: fit-content;
+    margin: 0 auto 60px auto;
+}
+
+.tab {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.tab.active,
+.tab:hover {
+    background: white;
+    color: #014b32;
+}
+
+.drink-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.drink-card {
+    background: white;
+    color: black;
+    padding: 20px;
+    width: 220px;
+    border-radius: 25px;
+    transition: 0.4s;
+    position: relative;
+}
+
+.drink-card img {
+    width: 120px;
+    margin-top: -60px;
+    transition: 0.4s;
+}
+
+.drink-card h3 {
+    margin: 15px 0 5px 0;
+}
+
+.drink-card p {
+    color: #00704A;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.drink-card button {
+    padding: 8px 20px;
+    border: none;
+    background: #00d084;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.drink-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.drink-card:hover img {
+    transform: scale(1.1)
+}
+
+.drink-card button:hover {
+    background: #00704A;
+}
+
+.quality-banner {
+    margin-top: 120px;
+}
+
+.quality-banner h1 {
+    font-size: 60px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.starbucks-strip {
+    margin-top: 50px;
+    background: #00d084;
+    padding: 15px 0;
+    transform: rotate(-5deg);
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    color: white;
+}
+
+.popular-section {
+    padding: 120px 60px;
+    position: relative;
+}
+
+.popular-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.popular-title span {
+    background: white;
+    color: #014b32;
+    padding: 10px 40px;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.popular-products {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.popular-card {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 20px;
+    width: 220px;
+    text-align: center;
+    position: relative;
+    transition: 0.4s;
+}
+
+.popular-card img {
+    width: 130px;
+    margin-top: -50px;
+    transition: 0.4s;
+}
+
+.popular-card button {
+    margin-top: 10px;
+    padding: 6px 20px;
+    border: none;
+    background: #00d084;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.popular-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.popular-card:hover img {
+    transform: scale(1.1)
+}
+
+.popular-card.big {
+    background: transparent;
+    color: white;
+    width: 250px;
+}
+
+.circle-bg {
+    width: 180px;
+    height: 180px;
+    background: #00d084;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 35px;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+.popular-card.big img {
+    position: relative;
+    z-index: 2;
+}
+
+.branches-wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+
+.branches-title {
+    width: 100px;
+    color: #051412;
+    background-color: white;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 3px;
+    margin-left: 20px;
+}
+
+.branches {
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    gap: 25px;
+}
+
+.branch-card {
+    background: white;
+    color: black;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.map {
+    width: 80px;
+    background: #eaeaea;
+}
+
+.branch-info {
+    padding: 15px;
+}
+
+.branch-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.contact-section {
+    padding: 80px 60px;
+    position: relative;
+}
+
+.top-strip {
+    background: #00d084;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-box {
+    background: white;
+    color: black;
+    padding: 30px;
+    border-radius: 20px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: 0.4s;
+}
+
+.contact-box input,
+.contact-box textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.contact-box button {
+    padding: 10px;
+    border: none;
+    background: #00d084;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-box button:hover {
+    background: #00704A;
+}
+
+.thankyou-box {
+    background: #014b32;
+    padding: 40px;
+    border-radius: 20px;
+    width: 320px;
+    position: relative;
+    transition: 0.4s;
+}
+
+.thankyou-box p {
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.arrow-btn {
+    width: 45px;
+    height: 45px;
+    background: #00d084;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.arrow-btn:hover {
+    transform: scale(1.1);
+    background: white;
+    color: #014b32;
+}
+
+.bottom-area {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.brand-info {
+    max-width: 300px;
 }
